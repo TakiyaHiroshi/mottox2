@@ -6,6 +6,7 @@ import Footer from "./Footer";
 
 import "minireset.css";
 import "./styles.css";
+import WorkItem from "./WorkItem";
 
 const App = () => {
 	return (
@@ -30,16 +31,11 @@ const App = () => {
 			<section className="section" id="works">
 				<h2 className="section-title">Works</h2>
 				<ul>
-					<li className="workItem">
-						<img src="" alt="" />
-						<h3 className="workItem-category">成果物1</h3>
-						<h3 className="workItem-title">すごいC向けサービス</h3>
-					</li>
-					<li className="workItem">
-						<img src="" alt="" />
-						<h3 className="workItem-category">成果物1</h3>
-						<h3 className="workItem-title">すごいC向けサービス</h3>
-					</li>
+					<WorkItem title="すごいC向けサービス" category="2018 - Frontend" />
+					<WorkItem
+						title="すごいスマートフォンアプリ"
+						category="2017 - Design"
+					/>
 				</ul>
 			</section>
 			<Footer />
