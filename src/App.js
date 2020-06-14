@@ -1,9 +1,13 @@
 import React from "react";
-import "minireset.css";
-import "./styles.css";
 import { Helmet } from "react-helmet";
 
-export default function App() {
+import Header from "./Header";
+import Footer from "./Footer";
+
+import "minireset.css";
+import "./styles.css";
+
+const App = () => {
 	return (
 		<div className="App">
 			<Helmet>
@@ -12,17 +16,7 @@ export default function App() {
 				<meta name="description" content="ポートフォリオサイトのサンプルです" />
 			</Helmet>
 
-			<header className="header">
-				<h1 className="header-title">Portfolio</h1>
-				<nav className="headerNav">
-					<a className="headerNav-item" href="#about">
-						About
-					</a>
-					<a className="headerNav-item" href="#works">
-						Works
-					</a>
-				</nav>
-			</header>
+			<Header />
 			<div className="hero">
 				<h1 className="hero-title">mottox2</h1>
 				<p className="hero-description">Web Engineer, Prototyper</p>
@@ -48,9 +42,9 @@ export default function App() {
 					</li>
 				</ul>
 			</section>
-			<footer className="footer">
-				<a href="https://twitter.com/mottox2">Twitter</a>
-			</footer>
+			<Footer />
 		</div>
 	);
-}
+};
+
+export default App;
